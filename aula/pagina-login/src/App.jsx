@@ -39,7 +39,9 @@ function App() {
         />
       </div>
       <div className="card">
-        <button onClick={entrar}>Entrar</button>
+        <button type="button" onClick={entrar}>
+          Entrar
+        </button>
       </div>
     </>
   );
