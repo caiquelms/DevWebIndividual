@@ -1,7 +1,9 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import axios from "axios";
+import api from "../../services/api";
 import Task from "./components/Task";
 import CreateTask from "./components/CreateTask";
+import { AuthContext } from "../../context/AuthContext";
 
 const url = "https://6542c27001b5e279de1f8a8c.mockapi.io/tasklist";
 
@@ -10,6 +12,7 @@ const TaskList = () => {
   const [tarefas, setTarefas] = useState([]);
   const [loading, setLoading] = useState(false);
   const [prova, setProva] = useState(false);
+  const { sair } = useContext(AuthContext);
 
   //   function cadastrar(){}
   const cadastrar = async () => {
@@ -21,7 +24,7 @@ const TaskList = () => {
     };
 
     try {
-      const { data } = await axios.post(url, task);
+      const { data } = await api.post("/tasklist", task);
       console.log(data);
       // console.log([...tarefas, novaTarefa]); FORMA ANTIGA
       setTarefas([...tarefas, data]);
@@ -96,6 +99,7 @@ const TaskList = () => {
   return (
     <main>
       <h1>Lista de Tarefas</h1>
+      <button onClick={sair}>Deslogar</button>
       <section>
         <CreateTask
           novaTarefa={novaTarefa}
