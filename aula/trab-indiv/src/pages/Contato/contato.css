@@ -15,3 +15,7 @@ div {
 h1 {
   margin-top: 50px;
 }
+
+a:hover {
+  border-bottom: 2px solid #fff;
+}

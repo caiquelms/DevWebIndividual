@@ -6,7 +6,11 @@ const Contato = () => {
     <>
       <h1>Contato</h1>
       <div className="contato">
-        <Link to="https://github.com/caiquelms" target="_blank">
+        <Link
+          className="contato"
+          to="https://github.com/caiquelms"
+          target="_blank"
+        >
           GitHub: caiquelms
         </Link>
       </div>
