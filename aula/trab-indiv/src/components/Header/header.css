@@ -1,0 +1,35 @@
+header {
+  background-color: #3b3a3a;
+  color: #fff;
+  padding: 10px 10px 10px 0px;
+  width: 100vw;
+  height: 50px;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  text-align: center;
+}
+
+nav li {
+  display: inline;
+  margin-right: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  margin: 200px;
+}
+
+nav a:hover {
+  border-bottom: 2px solid #fff;
+}
+
+.sticky {
+  position: sticky;
+  height: 50px;
+  top: 0;
+}

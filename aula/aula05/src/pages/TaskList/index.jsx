@@ -62,6 +62,25 @@ const TaskList = () => {
     }
   };
 
+  const editarTarefa = async (id) => {
+    const task = {
+      prioridade: "alta",
+    };
+    try {
+      const { data } = await axios.put(`${url}/1`, task);
+      const arrayEditado = tarefas.map((item) => {
+        if (1 == item.id) {
+          return data;
+        }
+        return item;
+      });
+      setTarefas(arrayEditado);
+      console.log(data);
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
   // O useEffect é executado logo após a PRIMEIRA montagem do componente na tela
   // useEffect( () => {}, [])
   useEffect(() => {
@@ -83,24 +102,17 @@ const TaskList = () => {
           setNovaTarefa={setNovaTarefa}
           cadastrar={cadastrar}
         />
-        {/*<h2>Cadastre sua tarefa</h2>
-         {<input
-          type="text"
-          value={novaTarefa}
-          onChange={(e) => setNovaTarefa(e.target.value)}
-        />
-        <button onClick={cadastrar}>+</button>*/}
       </section>
       <section>
         <h2>Lista de Tarefas</h2>
-        {/* EXIBIR ARRAY */}
         {tarefas.map((item) => (
-          <Task key={item.id} item={item} excluirTarefa={excluirTarefa} />
+          <Task
+            key={item.id}
+            item={item}
+            excluirTarefa={excluirTarefa}
+            editarTarefa={editarTarefa}
+          />
         ))}
-        {/* { <div key={item.id}>
-            <h3>{item.title}</h3>
-            <button onClick={() => excluirTarefa(item.id)}>Excluir</button>
-          </div>} */}
       </section>
     </main>
   );

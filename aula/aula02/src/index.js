@@ -8,6 +8,6 @@ import Gatinhos from "./pages/Gatinhos";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <Contador />
+    <Gatinhos />
   </React.StrictMode>
 );

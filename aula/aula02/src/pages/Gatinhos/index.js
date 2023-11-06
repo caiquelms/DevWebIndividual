@@ -60,8 +60,8 @@ export default function Gatinhos() {
     {
       id: "yCd1pVi7Y",
       url: "https://cdn2.thecatapi.com/images/yCd1pVi7Y.jpg",
-      width: 1800,
-      height: 2000,
+      width: 500,
+      height: 700,
     },
   ];
 

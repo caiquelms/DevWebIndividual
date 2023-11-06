@@ -1,0 +1,12 @@
+.container h1 {
+  margin-bottom: 50px;
+}
+
+.container {
+  padding: 20px;
+  display: grid;
+}
+
+img {
+  width: 500px;
+}
