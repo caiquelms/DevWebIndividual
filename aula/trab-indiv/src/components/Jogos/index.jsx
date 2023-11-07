@@ -3,6 +3,7 @@ const Jogo = ({ jogo }) => {
     <div className="container-jogo">
       <img src={jogo.url} />
       <p className="jogos">{jogo.jogo}</p>
+      <p className="desc">{jogo.desc}</p>
     </div>
   );
 };

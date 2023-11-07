@@ -19,16 +19,27 @@ img:hover {
 }
 
 .jogos {
-  border-bottom: 2px solid white;
+  /* border-bottom: 2px solid white; */
   padding: 20px;
   font-size: 30px;
   width: 460px;
   margin: 0 auto;
-  margin-bottom: 50px;
-  box-shadow: 5px;
+  margin-bottom: 0;
+  box-shadow: red 5px;
 }
 
 .container-jogo {
   text-align: center;
   margin: 0 auto;
+}
+
+.desc {
+  padding: 20px;
+  border-bottom: 2px solid white;
+  margin-bottom: 50px;
+  font-size: 20px;
+}
+
+p {
+  margin: auto;
 }
