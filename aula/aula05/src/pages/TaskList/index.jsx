@@ -70,9 +70,9 @@ const TaskList = () => {
       prioridade: "alta",
     };
     try {
-      const { data } = await axios.put(`${url}/1`, task);
+      const { data } = await axios.put(`${url}/${id}`, task);
       const arrayEditado = tarefas.map((item) => {
-        if (1 == item.id) {
+        if (id == item.id) {
           return data;
         }
         return item;
