@@ -13,6 +13,27 @@ const Contato = () => {
         >
           GitHub: caiquelms
         </Link>
+        <Link
+          className="contato"
+          to="https://github.com/caiquelms"
+          target="_blank"
+        >
+          GitHub: caiquelms
+        </Link>
+        <Link
+          className="contato"
+          to="https://github.com/caiquelms"
+          target="_blank"
+        >
+          GitHub: caiquelms
+        </Link>
+        <Link
+          className="contato"
+          to="https://github.com/caiquelms"
+          target="_blank"
+        >
+          GitHub: caiquelms
+        </Link>
       </div>
     </>
   );
